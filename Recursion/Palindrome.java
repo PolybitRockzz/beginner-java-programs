@@ -10,24 +10,27 @@ package Recursion;
 import java.util.Scanner;
 
 public class Palindrome {
-    public static boolean isPalindrome(String string) {
-        // Check if the string is the same forwards and backwards
-        return string.equals(new StringBuilder(string).reverse().toString());
+    public static boolean isPalindrome(String str, int start, int end) {
+        if (start >= end) {
+            return true;
+        } else if (str.charAt(start) != str.charAt(end)) {
+            return false;
+        } else {
+            return isPalindrome(str, start + 1, end - 1);
+        }
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
+        Scanner input = new Scanner(System.in);
         System.out.print("Enter a string: ");
-        String string = sc.nextLine();
+        String str = input.nextLine();
 
-        // Check if the string is a palindrome
-        if (isPalindrome(string)) {
+        if (isPalindrome(str, 0, str.length() - 1)) {
             System.out.println("The string is a palindrome.");
         } else {
             System.out.println("The string is not a palindrome.");
         }
-
-        sc.close();
+        
+        input.close();
     }
 }
