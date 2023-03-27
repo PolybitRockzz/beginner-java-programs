@@ -2,6 +2,8 @@
 
 This repository contains a collection of basic Java programs that are suitable for beginners who are just starting to learn Java. The programs are segregated into different types of programs for easy navigation.
 
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
+
 ## Contents
 
 - Getting Started
